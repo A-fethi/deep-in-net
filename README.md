@@ -171,14 +171,27 @@ deep-in-net.com   → deep-in-net.local (CNAME Record)
 
 ### Knowledge
 
+**Server** : "A server is a device that provides a specific service to client devices on a network. Its purpose is to centralize resources so multiple clients can access them. Each server has a static IP address so clients always know where to find it."
+
+
 **DHCP** (Dynamic Host Configuration Protocol): Automatically assigns IPs via DORA process (Discover, Offer, Request, Acknowledge). Port 67/68, UDP, Layer 7.
+```
+Purpose: Gives IP addresses to devices automatically
+Client asks:  "I need an IP address!"
+Server gives: "Your IP is 192.168.1.10"
+```
 
 **DNS** (Domain Name System): Translates domain names to IP addresses. Port 53, UDP, Layer 7.
 - A Record: name → IPv4 address
 - CNAME: name → another name (alias)
 - MX: mail server
 - AAAA: name → IPv6 address
-- PTR: reverse lookup
+
+```
+Purpose: Translates names to IP addresses
+Client asks:  "What is the IP of google.com?"
+Server gives: "It is 142.250.185.46"
+```
 
 **HTTP vs HTTPS:**
 | HTTP | HTTPS |
@@ -187,7 +200,19 @@ deep-in-net.com   → deep-in-net.local (CNAME Record)
 | No encryption | SSL/TLS encrypted |
 | Layer 7 | Layer 7 |
 
+```
+Purpose: Hosts websites and serves web pages
+Client asks:  "Give me the webpage at deep-in-net.com"
+Server gives: "Here is the HTML page"
+```
+
 **FTP** (File Transfer Protocol): Transfers files. Port 21 (control), Port 20 (data). TCP, Layer 7.
+
+```
+Purpose: Stores and transfers files
+Client asks:  "I want to upload/download this file"
+Server gives: "Here is the file" or "File uploaded"
+```
 
 **TCP vs UDP:**
 | TCP | UDP |
